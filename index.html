@@ -4,9 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodens Rosier | Abogado Penalista</title>
+
+    <!-- Etiquetas SEO Básicas -->
+    <title>Rodens Rosier | Abogado Penalista en Santiago</title>
     <meta name="description"
-        content="Rodens Rosier. Abogado penalista dedicado a la defensa de sus derechos con rigor y excelencia.">
+        content="Especialista en derecho penal, delitos económicos y corporativos. Agenda tu consulta legal con Rodens Rosier. Defensa estratégica e inquebrantable.">
+    <meta name="keywords"
+        content="abogado penalista, derecho penal, delitos economicos, abogado corporativo, santiago, chile, rodens rosier">
+    <meta name="author" content="Agencia SheoInformatic">
+
+    <!-- Open Graph (Para cuando compartan el link en WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:title" content="Rodens Rosier | Abogado Penalista">
+    <meta property="og:description" content="Defensa Penal Inquebrantable. Agenda tu consulta legal ahora.">
+    <meta property="og:image" content="assets/portrait.jpg">
+    <meta property="og:url" content="https://sheoinformatic.github.io/Rodens-abogado/">
+    <meta property="og:type" content="website">
+
+    <!-- Google Analytics (GA4) Placeholder -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -170,27 +192,34 @@
         </div>
     </section>
 
-    <!-- Nueva Sección de Pagos con Webpay -->
+    <!-- Nueva Sección de Pagos (Lista para Link de Webpay/Flow real) -->
     <section id="pagos" class="section bg-dark">
         <div class="container text-center">
             <h3 class="section-subtitle gold-text">Pagos en Línea</h3>
-            <h2 class="section-title">Emita su Pago de Consulta</h2>
-            <p class="section-description">Genere un token de pago seguro para su consulta legal.</p>
+            <h2 class="section-title">Pague su Consulta Legal</h2>
+            <p class="section-description">Procesamos pagos de forma 100% segura a través de Webpay Plus.</p>
 
             <div class="webpay-container" style="margin-top: 2rem;">
-                <button id="btnGenerarToken" class="btn-webpay">
-                    <i class="fas fa-credit-card"></i> Generar Token de Pago
-                </button>
-                <div id="simulacionPago"
-                    style="display: none; margin-top: 1.5rem; background: var(--secondary-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--accent-gold);">
-                    <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">Token Generado</h4>
-                    <p id="tokenDisplay" style="font-family: monospace; font-size: 1.2rem; margin-bottom: 1rem;"></p>
-                    <button id="btnPagarToken" class="btn-primary" style="padding: 0.5rem 1.5rem;">Simular Pago del
-                        Token</button>
-                </div>
+                <!-- 
+                  INSTRUCCIÓN PARA EL CLIENTE FINAL:
+                  Reemplaza el '#' en href="#" por el link real de cobro generado en Flow.cl o MercadoPago.
+                  Ejemplo: href="https://www.flow.cl/app/webpay/pago.php?token=tu-token"
+                -->
+                <a href="#" target="_blank" class="btn-webpay" id="btnPagoReal">
+                    <i class="fas fa-credit-card"></i> Pagar con Webpay Plus
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #ccc;">
+                    * Al hacer clic será redirigido a nuestro portal seguro de pagos.
+                </p>
             </div>
 
-            <!-- Panel de Base de Datos Simulada para Tokens -->
+            <!-- 
+              NOTA DE DESARROLLO:
+              La simulación interactiva con base de datos local (localStorage) 
+              fue comentada para la versión comercial. 
+              Si quieres verla de nuevo, descomenta el código a continuación y en script.js.
+            -->
+            <!--
             <div class="historial-pagos" style="margin-top: 4rem; text-align: left;">
                 <h3 class="section-subtitle gold-text" style="display: inline-block;">Base de Datos de Pagos</h3>
                 <button id="btnLimpiarBD" class="btn-secondary"
@@ -210,11 +239,12 @@
                             </tr>
                         </thead>
                         <tbody id="tablaTokensBody">
-                            <!-- Los tokens se insertarán aquí con JavaScript -->
+                            Los tokens se insertarán aquí con JavaScript
                         </tbody>
                     </table>
                 </div>
             </div>
+            -->
         </div>
     </section>
 

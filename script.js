@@ -114,6 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 6. Base de Datos Simulada para Pagos (Webpay LocalStorage)
+    // NOTA DE DESARROLLO: Todo el bloque siguiente ha sido comentado para 
+    // la versión de comercialización que utilizará un link de pago real (Flow/Webpay).
+
+    /*
     const btnGenerarToken = document.getElementById('btnGenerarToken');
     const simulacionPago = document.getElementById('simulacionPago');
     const tokenDisplay = document.getElementById('tokenDisplay');
@@ -140,6 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para visualizar los datos en la tabla HTML
     function renderTable() {
         const tokens = getTokensFromDB();
+        if(!tablaTokensBody) return;
+        
         tablaTokensBody.innerHTML = ''; // Limpia la tabla antes de volver a dibujar
 
         if (tokens.length === 0) {
@@ -206,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Trae la base de datos actual
             const dbTokens = getTokensFromDB();
-
+            
             // Busca el token actual y le cambia el estado a "Pagado"
             const updatedTokens = dbTokens.map(t => {
                 if (t.id === currentToken) {
@@ -217,9 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Guarda la actualización en la base de datos
             saveTokensToDB(updatedTokens);
-
-            alert(`¡Pago exitoso para el token ${currentToken}!`);
-
+            
+            alert(\`¡Pago exitoso para el token \${currentToken}!\`);
+            
             // Restaura la vista
             simulacionPago.style.display = 'none';
             btnGenerarToken.style.display = 'inline-flex';
@@ -242,4 +248,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dibujar la tabla por primera vez al cargar la página
     renderTable();
+    */
 });
