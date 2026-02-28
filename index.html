@@ -170,6 +170,54 @@
         </div>
     </section>
 
+    <!-- Nueva Sección de Pagos con Webpay -->
+    <section id="pagos" class="section bg-dark">
+        <div class="container text-center">
+            <h3 class="section-subtitle gold-text">Pagos en Línea</h3>
+            <h2 class="section-title">Emita su Pago de Consulta</h2>
+            <p class="section-description">Genere un token de pago seguro para su consulta legal.</p>
+
+            <div class="webpay-container" style="margin-top: 2rem;">
+                <button id="btnGenerarToken" class="btn-webpay">
+                    <i class="fas fa-credit-card"></i> Generar Token de Pago
+                </button>
+                <div id="simulacionPago"
+                    style="display: none; margin-top: 1.5rem; background: var(--secondary-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--accent-gold);">
+                    <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">Token Generado</h4>
+                    <p id="tokenDisplay" style="font-family: monospace; font-size: 1.2rem; margin-bottom: 1rem;"></p>
+                    <button id="btnPagarToken" class="btn-primary" style="padding: 0.5rem 1.5rem;">Simular Pago del
+                        Token</button>
+                </div>
+            </div>
+
+            <!-- Panel de Base de Datos Simulada para Tokens -->
+            <div class="historial-pagos" style="margin-top: 4rem; text-align: left;">
+                <h3 class="section-subtitle gold-text" style="display: inline-block;">Base de Datos de Pagos</h3>
+                <button id="btnLimpiarBD" class="btn-secondary"
+                    style="padding: 0.3rem 1rem; font-size: 0.8rem; float: right;">Limpiar BD</button>
+                <div style="clear: both; margin-bottom: 1rem;"></div>
+
+                <div class="table-container"
+                    style="overflow-x: auto; background: var(--secondary-bg); border-radius: 8px; padding: 1rem;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <th style="padding: 1rem; color: var(--accent-gold); text-align: left;">Token ID</th>
+                                <th style="padding: 1rem; color: var(--accent-gold); text-align: left;">Fecha Generación
+                                </th>
+                                <th style="padding: 1rem; color: var(--accent-gold); text-align: left;">Monto</th>
+                                <th style="padding: 1rem; color: var(--accent-gold); text-align: left;">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaTokensBody">
+                            <!-- Los tokens se insertarán aquí con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container footer-content">
             <div class="footer-logo">
@@ -185,6 +233,15 @@
             <p>&copy; 2026 Rodens Rosier. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Script de EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Inicialización de EmailJS con tu Public Key
+            emailjs.init("TU_PUBLIC_KEY_AQUI");
+        })();
+    </script>
 
     <script src="script.js"></script>
 </body>

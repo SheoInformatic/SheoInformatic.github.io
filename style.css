@@ -601,3 +601,39 @@ footer {
         margin: 0 0.75rem;
     }
 }
+
+/* Webpay Button Styles */
+.webpay-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-webpay {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #E3001B;
+    /* Color corporativo de Webpay/Transbank */
+    color: #FFF;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(227, 0, 27, 0.3);
+    font-family: var(--font-body);
+}
+
+.btn-webpay i {
+    font-size: 1.3rem;
+}
+
+.btn-webpay:hover {
+    background-color: #b30015;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(227, 0, 27, 0.4);
+    color: #FFF;
+}
