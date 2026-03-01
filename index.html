@@ -170,23 +170,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-container reveal-right">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" required placeholder="Nombre Completo">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" required placeholder="Correo Electrónico">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" required placeholder="Teléfono">
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" rows="4" required
-                                placeholder="Breve descripción de su consulta"></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
-                    </form>
+                <!-- Integración de Calendario y Reservas -->
+                <div class="contact-form-container reveal-right"
+                    style="padding: 0; overflow: hidden; background: transparent; box-shadow: none;">
+                    <!-- 
+                      INSTRUCCIÓN PARA EL CLIENTE FINAL:
+                      1. Créate una cuenta gratis en Calendly.com y conéctala a tu Google Calendar.
+                      2. Reemplaza el enlace a continuación (https://calendly.com/tu-usuario/tu-evento)
+                         por el enlace real que te dé Calendly.
+                    -->
+                    <!-- Principio del widget integrado de Calendly -->
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/sheoinformatic/consulta-legal-rodens"
+                        style="min-width:320px;height:700px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+                        async></script>
+                    <!-- Fin del widget integrado de Calendly -->
                 </div>
             </div>
         </div>

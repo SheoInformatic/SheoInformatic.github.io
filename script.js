@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // 5. Form Submission y Configuración de EmailJS
+    /* 
+    // 5. Form Submission y Configuración de EmailJS (Reemplazado por Calendly)
     const form = document.getElementById('contactForm');
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -86,23 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 message: document.getElementById('message').value
             };
 
-            /*
-              NOTA: Para que funcione el correo real, debes crearte una cuenta en EmailJS,
-              reemplazar el PUBLIC_KEY en el index.html, y el SERVICE_ID / TEMPLATE_ID aquí:
-              
-              emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID', templateParams)
-                  .then((response) => {
-                      alert(`¡Gracias ${templateParams.user_name}! Se ha enviado un correo a ${templateParams.user_email} para agendar su consulta penal.`);
-                      form.reset();
-                      submitBtn.textContent = originalText;
-                      submitBtn.disabled = false;
-                  }, (error) => {
-                      alert('Hubo un error al enviar el mensaje. Intente de nuevo.');
-                      submitBtn.textContent = originalText;
-                      submitBtn.disabled = false;
-                  });
-            */
-
             // Simulación visual mientras no pones tus credenciales de EmailJS:
             setTimeout(() => {
                 alert(`¡Gracias ${templateParams.user_name}!\nHemos enviado un correo automático a ${templateParams.user_email} con los pasos para agendar su consulta penal y procesar el enlace de pago.`);
@@ -112,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500); // Espera 1.5 segundos simulando tiempo de carga de internet
         });
     }
+    */
 
     // 6. Base de Datos Simulada para Pagos (Webpay LocalStorage)
     // NOTA DE DESARROLLO: Todo el bloque siguiente ha sido comentado para 
