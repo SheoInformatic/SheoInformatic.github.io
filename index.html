@@ -172,20 +172,20 @@
                 </div>
                 <!-- Integración de Calendario y Reservas -->
                 <div class="contact-form-container reveal-right"
-                    style="padding: 0; overflow: hidden; background: transparent; box-shadow: none;">
+                    style="padding: 0; overflow: hidden; background: transparent; box-shadow: none; border-radius: 8px;">
                     <!-- 
                       INSTRUCCIÓN PARA EL CLIENTE FINAL:
-                      1. Créate una cuenta gratis en Calendly.com y conéctala a tu Google Calendar.
-                      2. Reemplaza el enlace a continuación (https://calendly.com/tu-usuario/tu-evento)
-                         por el enlace real que te dé Calendly.
+                      1. Entra a tu Google Calendar y crea una "Página de Reservas" (Appointment Schedule).
+                      2. Dale a "Compartir" y selecciona "Incrustar en un sitio web".
+                      3. Copia el enlace `src` y pégalo aquí abajo donde dice src="..."
                     -->
-                    <!-- Principio del widget integrado de Calendly -->
-                    <div class="calendly-inline-widget"
-                        data-url="https://calendly.com/sheoinformatic/consulta-legal-rodens"
-                        style="min-width:320px;height:700px;"></div>
-                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
-                        async></script>
-                    <!-- Fin del widget integrado de Calendly -->
+
+                    <!-- Principio del widget integrado de Google Calendar -->
+                    <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0ExampleID?gv=true"
+                        style="border: 0; background-color: var(--secondary-bg); width: 100%; height: 700px; border-radius: 8px;"
+                        frameborder="0">
+                    </iframe>
+                    <!-- Fin del widget integrado de Google Calendar -->
                 </div>
             </div>
         </div>
